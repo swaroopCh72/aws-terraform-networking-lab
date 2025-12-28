@@ -1,7 +1,5 @@
----
 
-````md
-# Terraform AWS NAT Instance Lab
+## Terraform AWS NAT Instance Lab
 
 This repository contains a Terraform-based AWS infrastructure lab where a **custom VPC with public and private subnets** is provisioned using a **NAT instance** (not NAT Gateway).  
 The infrastructure was **created, verified, and safely destroyed** following best practices.
@@ -232,4 +230,4 @@ If this project helped you understand:
 
 Feel free to ⭐ the repository or use it as a reference.
 
--
+---

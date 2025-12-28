@@ -1,4 +1,3 @@
-
 ---
 
 ````md
@@ -29,10 +28,12 @@ This project demonstrates practical, hands-on understanding of:
 **VPC CIDR:** `10.0.0.0/16`
 
 ### Subnets
+
 - **Public Subnet:** `10.0.0.0/24`
 - **Private Subnet:** `10.0.1.0/24`
 
 ### Compute
+
 - **NAT Instance**
   - Deployed in public subnet
   - Provides outbound internet access for private subnet
@@ -43,6 +44,7 @@ This project demonstrates practical, hands-on understanding of:
   - Internet access only via NAT instance
 
 ### Networking
+
 - Internet Gateway attached to VPC
 - Public route table → `0.0.0.0/0` → Internet Gateway
 - Private route table → `0.0.0.0/0` → NAT instance (via ENI)
@@ -77,9 +79,10 @@ This project demonstrates practical, hands-on understanding of:
 ## 🚀 Usage
 
 ### Initialize Terraform
+
 ```bash
 terraform init
-````
+```
 
 ### Validate configuration
 
@@ -101,9 +104,9 @@ terraform apply
 
 ### Verify
 
-* SSH into public EC2
-* SSH from public EC2 to private EC2
-* Run `sudo apt update` from private EC2 to confirm NAT access
+- SSH into public EC2
+- SSH from public EC2 to private EC2
+- Run `sudo apt update` from private EC2 to confirm NAT access
 
 ### Destroy (clean teardown)
 
@@ -115,13 +118,14 @@ terraform destroy
 
 ## 🧹 Cleanup & Safety
 
-* All infrastructure was destroyed using `terraform destroy`
-* Verified:
+- All infrastructure was destroyed using `terraform destroy`
+- Verified:
 
-  * No running EC2 instances
-  * No custom VPCs remaining
-  * Terraform state is empty
-* No ongoing AWS costs
+  - No running EC2 instances
+  - No custom VPCs remaining
+  - Terraform state is empty
+
+- No ongoing AWS costs
 
 ---
 
@@ -129,10 +133,10 @@ terraform destroy
 
 The following are intentionally **excluded** from version control:
 
-* Terraform state files
-* `.terraform/` directory
-* `.pem` SSH keys
-* `.tfvars` files
+- Terraform state files
+- `.terraform/` directory
+- `.pem` SSH keys
+- `.tfvars` files
 
 This ensures no credentials or sensitive data are exposed.
 
@@ -140,11 +144,11 @@ This ensures no credentials or sensitive data are exposed.
 
 ## 🧠 Key Learnings
 
-* NAT instances require explicit routing via network interfaces
-* AMI IDs are region-specific
-* Terraform destroys only what is tracked in state
-* SSH access depends entirely on security group rules
-* Infrastructure should always be verified before destruction
+- NAT instances require explicit routing via network interfaces
+- AMI IDs are region-specific
+- Terraform destroys only what is tracked in state
+- SSH access depends entirely on security group rules
+- Infrastructure should always be verified before destruction
 
 ---
 
@@ -169,6 +173,7 @@ It focuses on understanding AWS networking and Terraform behavior rather than ma
 This project is licensed under the **MIT License**.
 
 You are free to:
+
 - Use
 - Modify
 - Distribute
@@ -184,6 +189,7 @@ This project is intended for **educational and portfolio purposes**.
 This is a personal learning project, but suggestions and improvements are welcome.
 
 If you’d like to contribute:
+
 1. Fork the repository
 2. Create a feature branch
 3. Submit a pull request with a clear description
@@ -219,10 +225,11 @@ Focused on learning infrastructure design, automation, and cloud security.
 ## ⭐ If You Found This Useful
 
 If this project helped you understand:
+
 - Terraform basics
 - AWS VPC networking
 - NAT instance behavior
 
 Feel free to ⭐ the repository or use it as a reference.
 
----
+-
